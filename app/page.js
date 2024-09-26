@@ -24,7 +24,7 @@ export default function Home() {
                   {/*btn and socials*/}
                   <div className={"flex flex-col xl:flex-row items-center gap-8"}>
                       <Button variant="outline" size={"lg"} className={"uppercase flex items-center gap-2"}>
-                            <span>Learn More about me</span>
+                            <a href="/resume">Learn More about me</a>
                             {/* <FiDownload className={"text-xl"}/> */}
                             <BsArrowDownRight className={"text-primary text-2xl -rotate-45"}/>
                       </Button>

@@ -65,7 +65,7 @@ const education = {
             degree: "BS. Computer Science '28",
             duration: "2024 - Present",
             description: "Courses Taken: CS 180 (Object-Orinated Programming), CS 193 (Tools)",
-            courseList: "CS 18000(Object Orinitened Programming) : CS 19300(Tools)"
+            courseList: "CS 18000(Object Orinitened Programming) : CS 19300(Tools)",
         },
         {
             institution: "Oswego Eash High School",
@@ -83,16 +83,16 @@ const skills = {
     description: 'I possess a diverse skill set that includes expertise in as listed below, along with strong communication and collaboration abilities. My adaptability and eagerness to learn enable me to thrive in dynamic environments and tackle new challenges effectively.',
     skillList: [
         {
+            icon: <FaJava/>,
+            name: 'Java'
+        },
+        {
             icon: <FaHtml5/>,
             name: 'HTML5'
         },
         {
-            icon: <FaCss3/>,
-            name: 'CSS 3'
-        },
-        {
-            icon: <FaReact/>,
-            name: 'ReactJS'
+            icon: <SiDotnet/>,
+            name: '.NET'
         },
         {
             icon: <FaNodeJs/>,
@@ -103,8 +103,8 @@ const skills = {
             name: 'AngularJS'
         },
         {
-            icon: <FaJava/>,
-            name: 'Java'
+            icon: <FaReact/>,
+            name: 'ReactJS'
         },
         {
             icon: <SiTailwindcss/>,
@@ -115,9 +115,9 @@ const skills = {
             name: 'Next.JS'
         },
         {
-            icon: <SiDotnet/>,
-            name: '.NET'
-        }
+            icon: <FaCss3/>,
+            name: 'CSS 3'
+        },
     ]
 }
 

@@ -9,46 +9,6 @@ import Link from "next/link";
 const services = [
     {
         num: '01',
-        title: 'PortalConnect',
-        skills: [
-            {
-                icon: <FaAngular />,
-                name: 'AngularCLI'
-            },
-            {
-                icon: <FaHtml5 />,
-                name: 'HTML5'
-            },
-            {
-                icon: <FaCss3 />,
-                name: 'CSS'
-            },
-        ],
-        description: 'A simply login system using the json-server and AngularCLI. And also have role based login where there 3 roles, User(can only view content), Techincal(can view list of user registerned by the Admin), Admin(have access to add techinal and user to the system).',
-        href: "https://google.com"
-    },
-    {
-        num: '02',
-        title: 'Hoo Bank',
-        skills: [
-            {
-                icon: <SiTailwindcss />,
-                name: 'Tailwind'
-            },
-            {
-                icon: <SiNextdotjs />,
-                name: 'Next.js'
-            },
-            {
-                icon: <SiFramer />,
-                name: 'Framer Motion'
-            }
-        ],
-        description: 'An UX design website using Next.js, Tailwind and Framer Motion. This is concept where people do the business With the right credit card, you can improve your financial life by building credit, earning rewards and saving money.',
-        href: "https://projecthoobank.azurewebsites.net"
-    },
-    {
-        num: '03',
         title: 'Portfolio',
         skills: [
             {
@@ -64,8 +24,48 @@ const services = [
                 name: 'React'
             }
         ],
-        description: 'A simple portfolio website using React and Tailwind CSS. This is concept where people can showcase their work and skills.',
+        description: 'A simple portfolio website using React and Tailwind CSS. This is where I showcase their work and skills. Click on the arrow to see the project live.',
+        href: "https://tksk.azurewebsites.net"
+    },
+    {
+        num: '02',
+        title: 'PortalConnect',
+        skills: [
+            {
+                icon: <FaAngular />,
+                name: 'AngularCLI'
+            },
+            {
+                icon: <FaHtml5 />,
+                name: 'HTML5'
+            },
+            {
+                icon: <FaCss3 />,
+                name: 'CSS'
+            },
+        ],
+        description: 'A simply login system using the json-server and AngularCLI. And also have role based login where there 3 roles, User(can only view content), Techincal(can view list of user registerned by the Admin), Admin(have access to add techinal and user to the system). ',
         href: ""
+    },
+    {
+        num: '03',
+        title: 'Hoo Bank',
+        skills: [
+            {
+                icon: <SiTailwindcss />,
+                name: 'Tailwind'
+            },
+            {
+                icon: <SiNextdotjs />,
+                name: 'Next.js'
+            },
+            {
+                icon: <SiFramer />,
+                name: 'Framer Motion'
+            }
+        ],
+        description: 'An UX design website using Next.js, Tailwind and Framer Motion. This is concept where people do the business With the right credit card, you can improve your financial life by building credit, earning rewards and saving money. Click on the arrow to see the project live.',
+        href: "https://projecthoobank.azurewebsites.net"
     }
 ]
 
@@ -128,7 +128,6 @@ const Services = () => {
                                 {/*descritopn*/}
                                 <p className={"text-white/60"}>
                                     {service.description} 
-                                    Click on the arrow to see the project live.
                                 </p>
 
                                 {/*border*/}
