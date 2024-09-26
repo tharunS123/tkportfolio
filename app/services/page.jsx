@@ -1,36 +1,76 @@
 "use client";
 
 import { BsArrowDownRight} from "react-icons/bs";
+import { FaCss3, FaReact, FaNodeJs, FaAngular, FaJava} from "react-icons/fa";
+import { SiTailwindcss, SiNextdotjs, SiDotnet, SiFramer} from "react-icons/si";
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
 import Link from "next/link";
 
 const services = [
     {
         num: '01',
-        title: 'Web Development',
-        description: 'A sentence is a combination of words put together to convey an idea, a fact, a question, a thought, a request or a command. ',
-        href: ""
+        title: 'PortalConnect',
+        skills: [
+            {
+                icon: <FaAngular />,
+                name: 'AngularCLI'
+            },
+            {
+                icon: <FaHtml5 />,
+                name: 'HTML5'
+            },
+            {
+                icon: <FaCss3 />,
+                name: 'CSS'
+            },
+        ],
+        description: 'A simply login system using the json-server and AngularCLI. And also have role based login where there 3 roles, User(can only view content), Techincal(can view list of user registerned by the Admin), Admin(have access to add techinal and user to the system).',
+        href: "https://google.com"
     },
     {
         num: '02',
-        title: 'UI/UX Design',
-        description: 'A sentence is a combination of words put together to convey an idea, a fact, a question, a thought, a request or a command. ',
-        href: ""
+        title: 'Hoo Bank',
+        skills: [
+            {
+                icon: <SiTailwindcss />,
+                name: 'Tailwind'
+            },
+            {
+                icon: <SiNextdotjs />,
+                name: 'Next.js'
+            },
+            {
+                icon: <SiFramer />,
+                name: 'Framer Motion'
+            }
+        ],
+        description: 'An UX design website using Next.js, Tailwind and Framer Motion. This is concept where people do the business With the right credit card, you can improve your financial life by building credit, earning rewards and saving money.',
+        href: "https://projecthoobank.azurewebsites.net"
     },
     {
         num: '03',
-        title: 'Logo Design',
-        description: 'A sentence is a combination of words put together to convey an idea, a fact, a question, a thought, a request or a command. ',
+        title: 'Portfolio',
+        skills: [
+            {
+                icon: <FaHtml5 />,
+                name: 'HTML5'
+            },
+            {
+                icon: <FaCss3 />,
+                name: 'CSS'
+            },
+            {
+                icon: <FaReact />,
+                name: 'React'
+            }
+        ],
+        description: 'A simple portfolio website using React and Tailwind CSS. This is concept where people can showcase their work and skills.',
         href: ""
-    },
-    {
-        num: '04',
-        title: 'SEQ',
-        description: 'A sentence is a combination of words put together to convey an idea, a fact, a question, a thought, a request or a command. ',
-        href: ""
-    },
+    }
 ]
 
 import {motion} from "framer-motion";
+import { FaHtml5 } from "react-icons/fa";
 
 
 const Services = () => {
@@ -59,8 +99,37 @@ const Services = () => {
                                 {/*heading*/}
                                 <h2 className={"text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500"}>{service.title}</h2>
 
+                                {/*skills*/}
+                                <div className={"flex gap-4"}>
+                                    {service.skills.map((skills, index) => {
+                                        return (
+                                            <div key={index} className={"flex items-center gap-2"}>
+                                                <TooltipProvider delayDuration={100}>
+                                                    <Tooltip>
+                                                        <TooltipTrigger className={"w-[45px] h-[45px] bg-[#232329] rounded-full flex justify-center items-center"}>
+                                                            <div className={" group-hover:text-accent transition-all duration-300"}>
+                                                                {skills.icon}
+                                                            </div>
+                                                        </TooltipTrigger>
+                                                        <TooltipContent>
+                                                            <p>{skills.name}</p>
+                                                        </TooltipContent>
+                                                    </Tooltip>
+                                                </TooltipProvider>
+                                                {/* <span className={"w-[45px] h-[45px] rounded-full bg-primary group-hover:bg-[#27272c] group-hover:text-accent transition-all duration-500 flex justify-center items-center"}
+                                                >
+                                                    {skills.icon}
+                                                </span> */}
+                                            </div>
+                                        )
+                                    })}
+                                </div>
+
                                 {/*descritopn*/}
-                                <p className={"text-white/60"}>{service.description}</p>
+                                <p className={"text-white/60"}>
+                                    {service.description} 
+                                    Click on the arrow to see the project live.
+                                </p>
 
                                 {/*border*/}
                                 <div className={"border-b border-white/20 w-full"}></div>

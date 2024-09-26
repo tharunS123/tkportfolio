@@ -1,11 +1,14 @@
 "use client";
 
-import { FaHtml5,FaCss3, FaJs, FaReact, FaFigma, FaNodeJs } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs} from "react-icons/si";
+import { FaHtml5, FaCss3, FaReact, FaNodeJs, FaAngular, FaJava } from "react-icons/fa";
+import { SiTailwindcss, SiNextdotjs, SiDotnet} from "react-icons/si";
 
 const about = {
     title: "About Me",
-    description: "A sentence is a combination of words put together to convey an idea, a fact, a question, a thought, a request or a command. Does that mean that you can assemble words in any order? Will it still be a sentence?",
+    description1: "Hello! I’m originally from India and have been living in the USA for the past seven years. My journey into programming began four years ago, during high school, when I joined my robotics team. It was there that I had my first real experience with coding, working on competition-level robots. This experience ignited my passion for problem-solving through technology and set the foundation for my programming career.",
+    description2: "I started with the basics—HTML and CSS—building simple web pages and gradually expanding my knowledge. Over the past four years, I’ve taken on multiple web development projects, honing my skills and growing as a developer. These projects have allowed me to explore front-end and back-end technologies, building fully functional websites and applications that are both user-friendly and efficient.",
+    description3: "Beyond coding, I’ve also had the privilege of taking on leadership roles. As Software Captain of my robotics team, I led a group of talented students, ensuring our software systems were optimized and helping guide others in learning the fundamentals of programming. This role not only strengthened my technical abilities but also taught me the importance of collaboration, communication, and mentorship.",
+    description4: "Now, I’m continuously seeking opportunities to grow, whether it’s through learning new technologies or taking on exciting challenges. I’m passionate about building meaningful, impactful solutions through code, and I look forward to applying my skills in more complex projects. Thank you for visiting my portfolio, and feel free to reach out if you’d like to connect!",
     info: [
         {
             fieldName: "Name",
@@ -46,43 +49,8 @@ const about = {
 const experience = {
     icon: '/assets/resume/badge.svg',
     title: 'My Experience',
-    description: 'A sentence is a combination of words put together to convey an idea, a fact, a question, a thought, a request or a command.',
+    description: 'At this time, I do not have formal work experience. However, I am eager to apply my academic knowledge, project work, and hands-on learning experiences to future professional opportunities. I am continuously developing my skills in Web Development(frontend & Full Stack), Object-Orientated programming and am enthusiastic about contributing to and growing within a dynamic work environment.',
     items: [
-        {
-            company: "Tech Solcution Inc. ",
-            position: "Full Stack Development",
-            duration: "2022 - Present"
-        },
-        {
-            company: "Tech Solcution Inc. ",
-            position: "Full Stack Development",
-            duration: "2022 - Present"
-        },
-        {
-            company: "Tech Solcution Inc. ",
-            position: "Full Stack Development",
-            duration: "2022 - Present"
-        },
-        {
-            company: "Tech Solcution Inc. ",
-            position: "Full Stack Development",
-            duration: "2022 - Present"
-        },
-        {
-            company: "Tech Solcution Inc. ",
-            position: "Full Stack Development",
-            duration: "2022 - Present"
-        },
-        {
-            company: "Tech Solcution Inc. ",
-            position: "Full Stack Development",
-            duration: "2022 - Present"
-        },
-        {
-            company: "Tech Solcution Inc. ",
-            position: "Full Stack Development",
-            duration: "2022 - Present"
-        }
     ]
 }
 
@@ -90,78 +58,66 @@ const experience = {
 const education = {
     icon: '/assets/resume/cup.svg',
     title: 'My Education',
-    description: 'A sentence is a combination of words put together to convey an idea, a fact, a question, a thought, a request or a command.',
+    description: 'Currently pursuing a Bachelors degree in Computer Science at the Purdue University. Focused on machine learning, and software development, with hands-on experience in both academic projects and personal projects.',
     items: [
         {
-            institution: "OEHS ",
-            degree: "9-12",
-            duration: "2022 - Present"
+            institution: "Purdue University",
+            degree: "BS. Computer Science '28",
+            duration: "2024 - Present",
+            description: "Courses Taken: CS 180 (Object-Orinated Programming), CS 193 (Tools)",
+            courseList: "CS 18000(Object Orinitened Programming) : CS 19300(Tools)"
         },
         {
-            institution: "Tech Solcution Inc. ",
-            degree: "Full Stack Development",
-            duration: "2022 - Present"
-        },
-        {
-            institution: "Tech Solcution Inc. ",
-            degree: "Full Stack Development",
-            duration: "2022 - Present"
-        },
-        {
-            institution: "Tech Solcution Inc. ",
-            degree: "Full Stack Development",
-            duration: "2022 - Present"
-        },
-        {
-            institution: "Tech Solcution Inc. ",
-            degree: "Full Stack Development",
-            duration: "2022 - Present"
-        },
-        {
-            institution: "Tech Solcution Inc. ",
-            degree: "Full Stack Development",
-            duration: "2022 - Present"
-        },
+            institution: "Oswego Eash High School",
+            degree: "9-12 Grades",
+            duration: "2020-2024",
+            description: "Courses Taken: AP Computer Science A & AP Computer Science Prinicple, Computer Programming 1 & 2, PLTW Cybersecurity",
+            courseList: "AP Computer Science A : AP Computer Science Prinicple : Computer Programming 1 & 2"
+        }
     ]
 }
 
 //skill
 const skills = {
     title: "My Skills",
-    description: 'A sentence is a combination of words put together to convey an idea, a fact, a question, a thought, a request or a command.',
+    description: 'I possess a diverse skill set that includes expertise in as listed below, along with strong communication and collaboration abilities. My adaptability and eagerness to learn enable me to thrive in dynamic environments and tackle new challenges effectively.',
     skillList: [
         {
             icon: <FaHtml5/>,
             name: 'HTML5'
         },
         {
-            icon: <FaHtml5/>,
-            name: 'HTML5'
+            icon: <FaCss3/>,
+            name: 'CSS 3'
         },
         {
-            icon: <FaHtml5/>,
-            name: 'HTML5'
+            icon: <FaReact/>,
+            name: 'ReactJS'
         },
         {
-            icon: <FaHtml5/>,
-            name: 'HTML5'
+            icon: <FaNodeJs/>,
+            name: 'NodeJS'
         },
         {
-            icon: <FaHtml5/>,
-            name: 'HTML5'
+            icon: <FaAngular/>,
+            name: 'AngularJS'
         },
         {
-            icon: <FaHtml5/>,
-            name: 'HTML5'
+            icon: <FaJava/>,
+            name: 'Java'
         },
         {
-            icon: <FaHtml5/>,
-            name: 'HTML5'
+            icon: <SiTailwindcss/>,
+            name: 'Tailwind CSS'
         },
         {
-            icon: <FaHtml5/>,
-            name: 'HTML5'
+            icon: <SiNextdotjs/>,
+            name: 'Next.JS'
         },
+        {
+            icon: <SiDotnet/>,
+            name: '.NET'
+        }
     ]
 }
 
@@ -192,7 +148,7 @@ const Resume = () => {
                             <div className={"flex flex-col gap-[30px] text-center xl:text-left"}>
                                 <h3 className={"text-4xl font-bold"}>{experience.title}</h3>
                                 <p className={"max-w-[600px] text-white/60 mx-auto xl:mx-0"}>{experience.description}</p>
-                                <ScrollArea className={"h-[400px]"}>
+                                {/* <ScrollArea className={"h-[400px]"}>
                                     <ul className={"grid gird-cols-1 lg:grid-cols-2 gap-[30px]"}>
                                         {experience.items.map((item, index) => {
                                             return (
@@ -207,7 +163,7 @@ const Resume = () => {
                                             )
                                         })}
                                     </ul>
-                                </ScrollArea>
+                                </ScrollArea> */}
                             </div>
                         </TabsContent>
 
@@ -216,17 +172,22 @@ const Resume = () => {
                                 <h3 className={"text-4xl font-bold"}>{education.title}</h3>
                                 <p className={"max-w-[600px] text-white/60 mx-auto xl:mx-0"}>{education.description}</p>
                                 <ScrollArea className={"h-[400px]"}>
-                                    <ul className={"grid gird-cols-1 lg:grid-cols-2 gap-[30px]"}>
+                                    <ul className={"grid gird-cols-1 lg:grid-cols-1 gap-[30px]"}>
                                         {education.items.map((item, index) => {
                                             return (
                                                 <li key={index}
-                                                    className={"bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"}>
+                                                    className={"bg-[#232329] h-[220px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"}>
                                                     <span className={"text-accent"}>{item.duration}</span>
-                                                    <h3 className={"text-xl max-w-[260px] min-h-[60px] text-center lg:text-left"}>{item.degree}</h3>
+                                                    <h3 className={"text-xl max-w-[260px] min-h-[60px] text-center lg:text-left"}>{item.institution}</h3>
                                                     <div className={"flex items-center gap-3"}>
                                                         <span
                                                             className={"w-[6px] h-[6px] rounded-full bg-accent"}></span>
-                                                        <p className={"text-white/60"}>{item.institution}</p>
+                                                        <p className={"text-white/60"}>{item.degree}</p>
+                                                    </div>
+                                                    <div className={"flex items-center gap-3"}>
+                                                        <span
+                                                            className={"w-[6px] h-[6px] rounded-full bg-accent"}></span>
+                                                        <p className={"text-white/60"}>{item.courseList}</p>
                                                     </div>
                                                 </li>
                                             )
@@ -244,7 +205,7 @@ const Resume = () => {
                                         {skills.description}
                                     </p>
                                 </div>
-                                <ul className={"grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gaps-[30px]"}>
+                                <ul className={"grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 gap-4 xl:gaps-[30px]"}>
                                     {skills.skillList.map((skill, index) => {
                                         return (
                                             <li key={index}>
@@ -269,9 +230,17 @@ const Resume = () => {
 
                         <TabsContent value={"about me"} className={"w-full text-center xl:text-left"}>
                            <div className={"flex flex-col gap-[30px]"}>
-                               <h3 className={"text-4xl font-bold"}>{about.title}</h3>
-                               <p className={"max-w-[600px] text-white/60 mx-auto xl:mx-0"}>{about.description}</p>
-                               <ul className={"grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0"}>
+                                <h3 className={"text-4xl font-bold"}>{about.title}</h3>
+                                <ScrollArea className={"h-[560px]"}>
+                                    <p className={"max-w-[600px] text-white/60 mx-auto xl:mx-0"}>
+                                        {about.description1}
+                                        {about.description2}
+                                        {about.description3}
+                                        {about.description4}
+                                    </p>
+                                </ScrollArea>
+
+                               {/* <ul className={"grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0"}>
                                    {about.info.map((item, index) => {
                                        return (
                                            <li key={index} className={"flex items-center justify-center xl:justify-start gap-4"}>
@@ -280,7 +249,7 @@ const Resume = () => {
                                            </li>
                                        )
                                    })}
-                               </ul>
+                               </ul> */}
                            </div>
                         </TabsContent>
                     </div>

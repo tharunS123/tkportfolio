@@ -6,6 +6,8 @@ import Socials from "../components/Socials";
 import Photo from "../components/Photo";
 import Stats from "../components/Stats";
 
+import { BsArrowDownRight} from "react-icons/bs";
+
 export default function Home() {
   return (
     <section className={"h-full"}>
@@ -22,8 +24,9 @@ export default function Home() {
                   {/*btn and socials*/}
                   <div className={"flex flex-col xl:flex-row items-center gap-8"}>
                       <Button variant="outline" size={"lg"} className={"uppercase flex items-center gap-2"}>
-                            <span>Download CV</span>
-                            <FiDownload className={"text-xl"}/>
+                            <span>Learn More about me</span>
+                            {/* <FiDownload className={"text-xl"}/> */}
+                            <BsArrowDownRight className={"text-primary text-2xl -rotate-45"}/>
                       </Button>
                       <div className={"mb-8 xl:mb-0"}>
                           <Socials

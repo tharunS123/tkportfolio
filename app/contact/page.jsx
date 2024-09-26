@@ -3,37 +3,41 @@
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
+import Link from "next/link";
 
 import {Select, SelectContent, SelectGroup,SelectItem,SelectLabel,SelectTrigger,SelectValue} from "@/components/ui/select";
 
-import {FaPhoneAlt, FaEnvelope, FaMapMarkerAlt} from "react-icons/fa";
+import {FaPhoneAlt, FaEnvelope, FaGithub, FaLinkedin} from "react-icons/fa";
 
 const info = [
     {
-        icon: <FaPhoneAlt/>,
-        title: "Phone",
-        description: "(+6 987 870 7879)",
+        icon: <FaGithub/>, path: "https://github.com/tharunS123",
+        title: "Github",
+        description: "@tharunS123"
     },
     {
         icon: <FaEnvelope/>,
         title: "Email",
-        description: "youremail@gmail.com",
+        description: "tharunsenthilkumar308@gmail.com",
     },
     {
-        icon: <FaMapMarkerAlt/>,
-        title: "Address",
-        description: "Code Corner, Tech Town 8738",
+        icon: <FaLinkedin/>, path: "https://linkedin.com/in/tharun-kumar-senthilkumar-0409a0324",
+        title: "LinkedIn",
+        description: "Tharun Kumar Senthilkumar",
     },
 ]
 
 import {motion} from "framer-motion";
 
-const Contact = () => {
+const Contact = (iconStyles) => {
     return (
         <motion.section
             initial={{opacity: 0}}
             animate={{opacity: 1, transition: {delay:2.4, duration:0.4, ease:"easeIn"}}}
             className={"py-6"}>
+                <div className="h-[50px] bg-accent text-center justify-center items-center mb-[35px] mt-[-40px] text-primary">
+                    <p className="pt-[7.8px]">The Contact form is still under construction. Sorry for the inconveninces...</p>
+                </div>
             <div className={"container mx-auto"}>
                 <div className={"flex flex-col xl:flex-row gap-[30px]"}>
                     <div className={"xl:w-[54%] order-2 xl:order-none"}>
@@ -48,18 +52,6 @@ const Contact = () => {
                                 <Input type={"email"} placeholder={"Email"}/>
                                 <Input type={"phone"} placeholder={"Phone Number"}/>
                             </div>
-                            <Select>
-                                <SelectTrigger className={"w-full"}>
-                                    <SelectValue placeholder={"Select a service"}/>
-                                </SelectTrigger>
-                                <SelectContent>
-                                    <SelectGroup>
-                                        <SelectLabel>Select a service</SelectLabel>
-                                        <SelectItem value={"est"}>Web Development</SelectItem>
-                                        <SelectItem value={"cst"}>UI/UX Design</SelectItem>
-                                    </SelectGroup>
-                                </SelectContent>
-                            </Select>
                             <Textarea className={"h-[200px]"} placeholder={"Type you message here."}/>
                             <Button size={"md"} className={"max-w-40"}>
                                 Send Message
@@ -71,12 +63,27 @@ const Contact = () => {
                             {info.map((item, index) => {
                                 return (
                                     <li key={index} className={"flex items-center gap-6"}>
-                                        <div className={"w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] bg-[#27272c] text-accent rounded-md flex items-center justify-center"}>
-                                            <div className={"text-[28px]"}>{item.icon}</div>
+                                        <div className={"w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] bg-[#27272c] hover:bg-accent hover:text-primary hover:transition-all duration-300 text-accent rounded-md flex items-center justify-center"}>
+                                            <a href={item.path}>
+                                            <motion.div 
+                                                initial={{ scale: 0 }}   
+                                                animate={{ rotate: 360, scale: 1 }}   
+                                                transition={{     
+                                                    type: "spring",     
+                                                    stiffness: 260,     
+                                                    damping: 20   
+                                                }}>
+                                                    <div className={"text-[28px]"}>
+                                                        {item.icon}
+                                                    </div>
+                                                </motion.div>
+                                            </a>
                                         </div>
                                         <div className={"flex-1"}>
                                             <p className={"text-white/60"}>{item.title}</p>
-                                            <h3 className={"text-xl"}>{item.description}</h3>
+                                            <h3 className={"text-xl"}>
+                                                {item.description}
+                                            </h3>
                                         </div>
                                     </li>
                                 )
